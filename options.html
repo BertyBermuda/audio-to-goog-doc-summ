@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="options.css">
+<title>Audio to Google Doc Summarizer — Settings</title>
+
+<main>
+  <h1>Audio to Google Doc Summarizer</h1>
+
+  <label for="baseUrl">Backend base URL</label>
+  <input type="url" id="baseUrl" spellcheck="false" autocomplete="off"
+         placeholder="https://your-domain.vercel.app">
+  <p class="hint">
+    No trailing path — the extension appends <code>/api/upload-url</code>, <code>/api/summarize-audio</code>
+    and <code>/api/status</code> itself. This origin must also appear in
+    <code>host_permissions</code> in <code>manifest.json</code>.
+  </p>
+
+  <label for="secret">Shared secret</label>
+  <input type="password" id="secret" spellcheck="false" autocomplete="off">
+  <p class="hint">
+    Must match <code>EXTENSION_SHARED_SECRET</code> in your Vercel environment variables.
+    Without it every route rejects the extension with a 401.
+  </p>
+
+  <div class="row">
+    <button id="save">Save</button>
+    <button id="test" class="secondary">Test connection</button>
+    <span id="status" role="status"></span>
+  </div>
+</main>
+
+<script type="module" src="options.js"></script>

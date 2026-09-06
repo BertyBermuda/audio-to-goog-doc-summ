@@ -1,0 +1,40 @@
+:root { color-scheme: light dark; }
+
+body {
+  margin: 0;
+  width: 300px;
+  font: 13px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main { padding: 14px; display: grid; gap: 10px; }
+
+h1 { margin: 0; font-size: 13px; font-weight: 600; }
+
+.hint { margin: 0; font-size: 11px; opacity: .65; }
+
+kbd {
+  font: inherit;
+  font-size: 10px;
+  padding: 1px 4px;
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: 4px;
+}
+
+#state { display: grid; gap: 8px; }
+
+.row { display: flex; align-items: center; gap: 7px; }
+
+.dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.dot.busy { background: #1a73e8; animation: pulse 1.2s ease-in-out infinite; }
+.dot.ok { background: #188038; }
+.dot.bad { background: #d93025; }
+.dot.idle { background: color-mix(in srgb, currentColor 30%, transparent); }
+
+@keyframes pulse { 50% { opacity: .3; } }
+
+.file { font-size: 11px; opacity: .7; overflow-wrap: anywhere; }
+.bad-text { margin: 0; color: #d93025; font-size: 12px; overflow-wrap: anywhere; }
+
+a { color: #1a73e8; }
+
+footer { font-size: 11px; opacity: .7; }

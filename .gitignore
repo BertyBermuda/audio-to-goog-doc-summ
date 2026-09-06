@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+
+# Real secrets. Only .env.example belongs in the repo.
+.env
+.env.local
+.env*.local
+
+.vercel
+.DS_Store
+*.log
